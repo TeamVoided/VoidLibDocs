@@ -1,7 +1,7 @@
 {
-  "name": "nextra-docs-template",
+  "name": "voidlib-docs",
   "version": "0.0.1",
-  "description": "Nextra docs template",
+  "description": "VoidLib Docs",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/TeamVoided/VoidLibDocs"
   },
-  "author": "Shu Ding <g@shud.in>",
+  "author": "wired-tomato",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TeamVoided/VoidLibDocs/issues"
