@@ -9,9 +9,9 @@ const config: DocsThemeConfig = {
   chat: {
     link: 'https://discord.gg/KZ5Q364hEg',
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/TeamVoided/VoidLibDocs',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'VoidLib Docs',
   },
 }
 
