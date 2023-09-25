@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { NextSeoProps } from "next-seo";
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <span>VoidLib Docs</span>,
   project: {
     link: 'https://github.com/TeamVoided/VoidLibDocs',
   },
