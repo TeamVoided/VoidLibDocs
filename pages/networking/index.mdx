@@ -2,7 +2,20 @@
 title: VoidLib Networking
 ---
 
-import { Tabs, Tab } from "nextra/components";
+import {Tabs, Tab} from "nextra/components";
+import {useState} from 'react'
+
+export function Thing() {
+    const [val, setVal] = useState()
+    fetch("https://maven.teamvoided.org/api/maven/latest/version/releases/org/teamvoided/voidlib-core")
+        .then(async e => setVal(await e.json()))
+    return (
+        <>
+            {console.log(val)}
+            {!!val && JSON.parse(JSON.stringify(val)).version}
+        </>
+    )
+}
 
 # About
 
@@ -16,29 +29,31 @@ You just have to handle the packet processing!
 
 Well first of all you probably want the library from [maven](https://maven.teamvoided.org)
 
+<Thing/>
+
 <Tabs items={["Kotlin DSL", "Groovy DSL"]}>
     <Tab>
         ```kotlin
         repositories {
-            maven { url = uri("https://maven.teamvoided.org/releases") }
-        }
+        maven {url = uri("https://maven.teamvoided.org/releases")}
+    }
 
         dependencies {
-            modImplementation(`org.teamvoided:voidlib-core:1.5.4+1.20.1`)
-            modImplementation("org.teamvoided:voidlib-networking:1.5.4+1.20.1")
-        }
+        modImplementation(`org.teamvoided:voidlib-core:1.5.4+1.20.1`)
+        modImplementation("org.teamvoided:voidlib-networking:1.5.4+1.20.1")
+    }
         ```
     </Tab>
     <Tab>
         ```groovy
         maven {
-            url "https://maven.teamvoided.org/releases"
-        }
+        url "https://maven.teamvoided.org/releases"
+    }
 
         dependencies {
-            modImplementation "org.teamvoided:voidlib-core:1.5.4+1.20.1"
-            modImplementation "org.teamvoided:voidlib-networking:1.5.4+1.20.1"
-        }
+        modImplementation "org.teamvoided:voidlib-core:1.5.4+1.20.1"
+        modImplementation "org.teamvoided:voidlib-networking:1.5.4+1.20.1"
+    }
         ```
     </Tab>
 </Tabs>
