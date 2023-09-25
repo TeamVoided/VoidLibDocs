@@ -1,0 +1,22 @@
+---
+title: Binary Wrapper
+description: `StringFormat` to `BinaryFormat`
+---
+
+# About
+
+You may have noticed that packets take in a `BinaryFormat` so you cant use a format like `Json` or `Toml`
+
+For that we provide the `BinaryWrapper` class
+
+# Usage
+
+To use the `BinaryWrapper` class, simply call its constructor with the `StringFormat` that you wish to use
+
+Here's an example
+
+```kotlin
+val wrapper = BinaryWrapper(Json { })
+```
+
+The `BinaryWrapper` class is a `BinaryFormat` so you can use it in your packets
