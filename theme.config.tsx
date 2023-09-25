@@ -26,6 +26,8 @@ const config: DocsThemeConfig = {
     } else {
       seoProps.title = "VoidLib Docs";
     }
+
+    return seoProps
   }
 }
 
