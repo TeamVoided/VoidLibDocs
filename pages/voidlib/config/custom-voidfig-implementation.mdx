@@ -1,0 +1,44 @@
+---
+title: Custom VoidFig Implementation
+description: Creating a custom `VoidFig` implementation
+---
+
+# Custom VoidFig Implementations
+
+These are only ever used if you want to use a non-kotlinx serialization library
+
+Here's how you make one
+
+```kotlin
+abstract class CustomVFig<Config: Any>(protected var config: Config): VoidFig {
+    override fun serialize() {
+        val file = VoidFigHelpers.getConfigFile(id, side, fileType)
+        file.parentFile.mkdirs()
+        file.createNewFile()
+
+        file.writeText(serialize(config))
+    }
+
+    override fun deserialize() {
+        val file = VoidFigHelpers.getConfigFile(id, side, fileType)
+        if (!file.exists()) {
+            serialize()
+            return
+        }
+
+        config = deserialize(file.readText())
+    }
+
+    protected fun serialize(data: Config): String {
+        //serialize config and return string
+    }
+
+    protected fun deserialize(data: String): Config {
+        //deserialize data from file and return new config
+        //tip use `VoidFigHelpers#getConfigFile` to get the config file
+    }
+
+    @JvmName("get_config")
+    fun getConfig() = config
+}
+```

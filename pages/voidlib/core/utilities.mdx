@@ -1,0 +1,96 @@
+---
+title: Utilities
+description: General utilities
+---
+
+# MCUtils
+`mc(path: String)` returns an Identifier with "minecraft" as its namespace and `path` as its path
+
+`Item.id` returns the item's id
+
+`Block.id` return the block's id
+
+`rotateVoxelShape(times: Int, shape: VoxelShape)` returns a rotated voxel shape
+
+`VoxelShape.rotate(time: Int)` calls `rotateVoxelShape(times, this)`
+
+# Item NBT
+The org.teamvoided.voidlib.core.nbt package has some utility functions for editing an `ItemStack`'s nbt
+
+Here they are
+
+`put(key: String, element: NbtElement, stack: ItemStack) -> NbtElement?`
+
+`putByte(key: String, byte: Byte, stack: ItemStack)`
+
+`putShort(key: String, short: Short, stack: ItemStack)`
+
+`putInt(key: String, int: Int, stack: ItemStack)`
+
+`putLong(key: String, long: Long, stack: ItemStack)`
+
+`putUuid(key: String, uuid: UUID, stack: ItemStack)`
+
+`getUuid(key: String, stack: ItemStack)`
+
+`containsUuid(key: String, stack: ItemStack)`
+
+`putFloat(key: String, float: Float, stack: ItemStack)`
+
+`putDouble(key: String, double: Double, stack: ItemStack)`
+
+`putString(key: String, string: String, stack: ItemStack)`
+
+`putByteArray(key: String, byteArray: ByteArray, stack: ItemStack)`
+
+`putByteArray(key: String, byteArray: List<Byte>, stack: ItemStack)`
+
+`putIntArray(key: String, intArray: IntArray, stack: ItemStack)`
+
+`putIntArray(key: String, intArray: List<Int>, stack: ItemStack)`
+
+`putLongArray(key: String, longArray: LongArray, stack: ItemStack)`
+
+`putLongArray(key: String, longArray: List<Long>, stack: ItemStack)`
+
+`putBoolean(key: String, boolean: Boolean, stack: ItemStack)`
+
+`get(key: String, stack: ItemStack) -> NbtElement?`
+
+`getType(key: String, stack: ItemStack) -> Byte`
+
+`contains(key: String, stack: ItemStack) -> Boolean`
+
+`contains(key: String, type: Int, stack: ItemStack) -> Boolean`
+
+`getByte(key: String, stack: ItemStack) -> Byte`
+
+`getShort(key: String, stack: ItemStack) -> Short`
+
+`getInt(key: String, stack: ItemStack) -> Int`
+
+`getLong(key: String, stack: ItemStack) -> Long`
+
+`getFloat(key: String, stack: ItemStack) -> Float`
+
+`getDouble(key: String, stack: ItemStack) -> Double`
+
+`getString(key: String, stack: ItemStack) -> String`
+
+`getByteArray(key: String, stack: ItemStack) -> ByteArray`
+
+`getIntArray(key: String, stack: ItemStack) -> IntArray`
+
+`getLongArray(key: String, stack: ItemStack) -> LongArray`
+
+`getCompound(key: String, stack: ItemStack) -> NbtCompound`
+
+`getList(key: String, type: Int, stack: ItemStack) -> NbtList`
+
+`getBoolean(key: String, stack: ItemStack) -> Boolean`
+
+`remove(key: String, stack: ItemStack)`
+
+`isEmpty(stack: ItemStack)`
+
+`subNbt(key: String, stack: ItemStack) -> NbtCompound`

@@ -1,0 +1,22 @@
+---
+title: Registering Your Config
+description: How to register your config
+---
+
+# Registering Your Config
+
+Registering your config is actually pretty simple.
+
+You simply have to call `ConfigManager#registerConfig` with your `VoidFig` passed as a parameter in your main entrypoint
+
+Here's an example
+
+```kotlin
+//main entrypoint
+fun commonSetup() {
+    //pretend "VFig" is your `VoidFig` object
+    ConfigManager.registerConfig(VFig)
+}
+```
+
+Yep it's that simple

@@ -1,0 +1,43 @@
+import {LatestRelease} from "../../../components/latest-release";
+import {Tabs, Tab} from "nextra/components";
+
+# About
+
+VoidLib provides networking with kotlinx.serialization!!!
+
+Packets will automatically get encoded and decoded from a PacketByteBuf
+
+You just have to handle the packet processing!
+
+# Prerequisites
+
+Well first of all you probably want the library from the [maven](https://maven.teamvoided.org)
+
+Latest release is "<LatestRelease/>"
+
+<Tabs items={["Kotlin DSL", "Groovy DSL"]}>
+    <Tab>
+        ```kotlin
+        repositories {
+            maven {url = uri("https://maven.teamvoided.org/releases")}
+        }
+
+        dependencies {
+            modImplementation("org.teamvoided:voidlib-core:${voidlib_version}")
+            modImplementation("org.teamvoided:voidlib-networking:${voidlib_version}")
+        }
+        ```
+    </Tab>
+    <Tab>
+        ```groovy
+        maven {
+            url "https://maven.teamvoided.org/releases"
+        }
+
+        dependencies {
+            modImplementation "org.teamvoided:voidlib-core:${voidlib_version}"
+            modImplementation "org.teamvoided:voidlib-networking:${voidlib_version}"
+        }
+        ```
+    </Tab>
+</Tabs>

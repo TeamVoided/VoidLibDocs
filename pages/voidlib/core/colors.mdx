@@ -1,0 +1,27 @@
+---
+title: Colors
+description: Colors or something
+---
+
+# Colors
+
+VoidLib core provides an `ARGB` class for color representation
+
+There's a couple ways of constructing `ARGB` here's the list
+
+```kotlin
+val nonTransparentColor = ARGB(113, 83, 172)
+//first parameter is alpha
+val transparentColor = ARGB(127, 113, 83, 172)
+val colorFromHex = ARGB.fromHexString("7153ac")
+//uses HSVA (last parameter is alpha)
+val colorFromHsv = ARGB.fromHSV(0.7228, 0.5174, 0.6742, 1.0)
+val colorFromArgbInt = ARGB.fromArgbInt(7426988)
+```
+
+You can convert ARGB to an int with the following
+
+```kotlin
+val color = ARGB(113, 83, 172)
+val colorInt = color.toInt()
+```

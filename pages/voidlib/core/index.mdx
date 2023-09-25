@@ -1,0 +1,46 @@
+---
+title: Prerequisites
+description: Core prerequisites
+---
+
+# About
+
+import {LatestRelease} from "../../../components/latest-release";
+import {Tabs, Tab} from "nextra/components";
+
+This library will most likely have a rewrite sometime in the future
+
+VoidLib has a core!!!
+
+Shocking I know.
+
+# Prerequisites
+
+Well first of all you probably want the library from the [maven](https://maven.teamvoided.org)
+
+Latest release is "<LatestRelease/>"
+
+<Tabs items={["Kotlin DSL", "Groovy DSL"]}>
+    <Tab>
+        ```kotlin
+        repositories {
+            maven {url = uri("https://maven.teamvoided.org/releases")}
+        }
+
+        dependencies {
+            modImplementation("org.teamvoided:voidlib-core:${voidlib_version}")
+        }
+        ```
+    </Tab>
+    <Tab>
+        ```groovy
+        maven {
+            url "https://maven.teamvoided.org/releases"
+        }
+
+        dependencies {
+            modImplementation "org.teamvoided:voidlib-core:${voidlib_version}"
+        }
+        ```
+    </Tab>
+</Tabs>

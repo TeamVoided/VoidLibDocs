@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { NextSeoProps } from "next-seo";
 
 const config: DocsThemeConfig = {
-  logo: <span>VoidLib Docs</span>,
+  logo: <span>Ultimate TeamVoided Documentation Assortment</span>,
   project: {
     link: 'https://github.com/TeamVoided/VoidLibDocs',
   },
@@ -13,7 +13,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/TeamVoided/VoidLibDocs',
   footer: {
-    text: 'VoidLib Docs',
+    text: 'Ultimate TeamVoided Documentation Assortment',
   },
   useNextSeoProps: () => {
     const { route } = useRouter();
@@ -22,9 +22,9 @@ const config: DocsThemeConfig = {
     let seoProps: NextSeoProps = { };
 
     if (route !== "/" || !frontMatter.title) {
-      seoProps.title = `${frontMatter.title} - VoidLib Docs`;
+      seoProps.title = `${frontMatter.title} - UTVDA`;
     } else {
-      seoProps.title = "VoidLib Docs";
+      seoProps.title = "UTVDA";
     }
 
     return seoProps
